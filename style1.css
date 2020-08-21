@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",cursive;
+}
+   
+html{
+    font-size: 10px;
+    
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("pizza4.jpg");
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    display: flex;
+justify-content: space-between;
+width:90%;
+margin:auto;
+height:7rem;
+align-items: center;
+}
+.logo{
+    
+    max-width: 8rem;
+    max-height: 8rem;
+}
+.logo img{
+    width:100%;
+    height:100%;
+}
+.navbar{
+    width:600px;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navbar ul li{
+    flex:1;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:1.4rem;
+    font-weight:bold;
+    color:#000;
+    position: relative;
+}
+.navbar ul li a::after{
+    content: "";
+    position: absolute;
+    height:3px;
+    background-color: navy;
+    width:0%;
+    display: block;
+    top:100%;
+    right:0;transition: all 0.9s linear;
+}
+
+.navbar ul li a:hover{
+    color:gold;
+}
+.navbar ul li a::before{
+    content: "";
+    position: absolute;
+    height:3px;
+    background-color: navy;
+    width:0%;
+    display: block;
+    top:0;
+    left:0;transition: all 0.9s linear;
+}
+
+.navbar ul li a:hover::after,.navbar ul li a:hover::before{
+    width:100%;
+}
+
+
+.contactheader{
+    font-size:1.7rem;
+}
+.contactheader span{
+    margin:10px;
+    color:#fff;
+    
+}
+#register{
+    background-image:linear-gradient(to right,dodgerblue,red);
+    border:none;
+    outline:none;
+    padding: 8px 16px;
+    width:120px;
+    
+}
+
+.bodytext{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    left:40%;
+    top:50%;
+    width:38rem;
+}
+.bodytext h1{
+    font-size:5rem;
+    width:48rem;
+    animation-name: text;
+    animation-fill-mode:both;
+    animation-timing-function: linear;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes text{
+    0%,100%{
+        color:black;
+    }
+    20%{color:red;}
+    40%{color:yellow}
+    60%{color:skyblue}
+    80%{color:deeppink}
+    100%{color:lawngreen}
+}
+.bodytext p{
+    margin:1.8rem 0rem;
+    font-size:1.8rem;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-color: navy;
+}
+#btn2{
+    background-image:linear-gradient(to right,dodgerblue 80%,red);
+    border:none;
+    outline:none;
+    padding: 8px 10px;
+    cursor: pointer;
+    width:90px;transition: all 0.9s linear;
+}
+#btn3{
+    background-image:linear-gradient(to right,red 80%,dodgerblue);
+    border:none;
+    outline:none;
+    cursor: pointer;
+    padding: 8px 10px;
+    width:90px;transition: all 0.9s linear;
+    margin:1.6rem;
+}
+#btn2:hover{
+    background-image:linear-gradient(to right,red 80%,dodgerblue);transform:scale(0.9);
+}
+#btn3:hover{
+    background-image:linear-gradient(to right,dodgerblue 80%,red);transform:scale(0.9);
+}
+
+.fa-times{
+    display: none;
+}
+.fa-bars{
+    position: fixed;
+    right:10px;
+    top:1.6rem;
+    font-size: 2.5rem;
+    display: none;
+}
+
+
+/* Making a Responsive Landing page */
+@media(max-width:1080px){
+
+    html{
+        font-size:55%;
+    }
+.navbar ul{
+    position: fixed;
+    height:100vh;
+    background-color: deeppink;
+    top:0;
+    right: -250px;
+    display: block;
+    width:200px;
+    z-index: 1;
+    transition: all 0.9s linear;
+}
+
+.navbar ul li {
+    margin-top: 100px;
+    text-align: center;
+}
+.navbar ul li a{
+    font-size:1.8rem;
+    text-align: center;
+}
+.fa-times,.fa-bars{
+    display: block;
+    cursor: pointer;
+    color:red;
+    margin-right:20px;
+}
+.fa-times{
+    position: absolute;
+    top:10px;
+    right:10px;
+    font-size:2.5rem;
+}
+header{
+    width:100%;
+}
+.contactheader{
+    display: none;
+}
+
+}
+
+@media (max-width:468px){
+    html{
+        font-size: 40%;
+    }
+    body{
+        background-image: url("pizza10.jpg");
+        height:100vh;
+        background-position: center;
+        background-size: cover;
+    }
+    .bodytext p{
+        color:#fff;
+    }
+   
+   
+}
+
+
+
+
+
+
+

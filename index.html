@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="navbar">
+            <ul id="sidebar">
+                <li><a href="" style="color: gold;"  >Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Contact</a></li>
+                <a href="javascript:void(0)"><i class="fa fa-times" id="close"></i></a>
+            </ul>
+        </div>
+        <div class="contactheader">
+            <span class="fa fa-phone"><span>9847238383</span> |</span>
+            <span>Log In</span>
+            <button id="register">Register</button>
+          
+        
+        </div>
+    </header>
+    <div class="iconsbar">
+        <i class="fa fa-bars" id="open"></i>
+    </div>
+    <main>
+        <div class="bodytext">
+            <h1>Delicious Recipes</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusantium adipisci expedita libero placeat recusandae repellat laudantium minima? Magni, eaque.</p>
+            <button id="btn1">Our Foods</button>
+            <button id="btn2">Reservation</button>
+        </div>
+        <div class="socialmediaicons">
+
+            <div class="icons">
+            <i class="fab fa-facebook">
+
+            </i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linledin"></i>
+            <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        let open=document.getElementById("open");
+       let  close=document.getElementById("close");
+       let sidebar=document.getElementById("sidebar");
+       open.onclick=()=>{
+            sidebar.style.right="0px"
+       }
+       close.onclick=()=>{
+            sidebar.style.right="-250px"
+       }
+    </script>
+</body>
+</html>
